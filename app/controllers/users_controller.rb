@@ -17,7 +17,6 @@ class UsersController < ApplicationController
       flash[:notice] = "User has been created."
       redirect_to @user
     else
-      flash
       # nothing, yet
     end
   end
