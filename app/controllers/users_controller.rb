@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
+    @users = User.all
   end
 
   def new
@@ -17,7 +18,8 @@ class UsersController < ApplicationController
       flash[:notice] = "User has been created."
       redirect_to @user
     else
-      # nothing, yet
+      flash[:alert] = "User has not been created."
+      render :action => "new"
     end
   end
 end
