@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130514004717) do
+ActiveRecord::Schema.define(:version => 20130515035336) do
+
+  create_table "payments", :force => true do |t|
+    t.float    "amount"
+    t.date     "payment_date"
+    t.integer  "user_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "payments", ["user_id"], :name => "index_payments_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"
