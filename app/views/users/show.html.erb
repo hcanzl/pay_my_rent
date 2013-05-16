@@ -9,4 +9,15 @@
             :method => :delete,
             :confirm => "Are you sure you want to delete this project?" %>
 
-<%= link_to "New Payment", new_user_payment_path(@user) %>
+<%= link_to "New Payment", new_user_payment_path(@user) %></br>
+
+<ul id='payments'>
+  <h4><%= "Payment History" %></h4>
+  <% @user.payments.each do |payment| %>
+    <li>
+      #<%= link_to payment.id, [@user, payment] %> -
+      $<%= payment.amount %>
+      <%= payment.payment_date %>
+    </li>
+  <% end %>
+</ul>

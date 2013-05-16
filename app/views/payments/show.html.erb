@@ -1,4 +1,7 @@
+<% title(@user.name, "Payment Details") %>
+
+<h3>Payment Details:</h3>
 <div id='payment'>
-  <h2><%= @payment.amount %></h2>
-  <h2><%= @payment.payment_date %></h2>
+  <h4>Amount: <%= @payment.amount %></h4>
+  <h4>Date of Payment: <%= @payment.payment_date %></h4>
 </div>
