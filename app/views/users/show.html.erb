@@ -11,13 +11,13 @@
 
 <%= link_to "New Payment", new_user_payment_path(@user) %></br>
 
+</br>
 <ul id='payments'>
   <h4><%= "Payment History" %></h4>
   <% @user.payments.each do |payment| %>
     <li>
-      #<%= link_to payment.id, [@user, payment] %> -
+      <%= link_to "Details", [@user, payment] %> -
       $<%= payment.amount %>
-      <%= payment.payment_date %>
     </li>
   <% end %>
 </ul>

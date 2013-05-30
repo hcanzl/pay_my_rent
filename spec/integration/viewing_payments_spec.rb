@@ -21,7 +21,7 @@ feature "Viewing payments" do
     page.should have_content("300")
     page.should_not have_content("500")
 
-    click_link "1"
+    click_link "Details"
     page.should have_content("300")
     page.should have_content("2012-01-03")
   end
