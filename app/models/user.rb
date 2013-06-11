@@ -11,6 +11,6 @@ class User < ActiveRecord::Base
   #attr_accessible :email, :name, :phone
 
   #validates :name, :phone, :presence => true
-  #has_many :payments
+  has_many :payments
   #validates :email, :presence => true, :uniqueness => true
 end

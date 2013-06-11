@@ -11,16 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130529224022) do
+ActiveRecord::Schema.define(:version => 20130530065426) do
 
   create_table "payments", :force => true do |t|
     t.float    "amount"
     t.date     "payment_date"
-    t.integer  "user_id"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
     t.boolean  "paid",         :default => false
     t.float    "rent_due"
+    t.integer  "user_id"
   end
 
   add_index "payments", ["user_id"], :name => "index_payments_on_user_id"

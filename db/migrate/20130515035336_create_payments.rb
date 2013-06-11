@@ -8,5 +8,6 @@ class CreatePayments < ActiveRecord::Migration
       t.timestamps
     end
     add_index :payments, :user_id
+
   end
 end
